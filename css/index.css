@@ -244,6 +244,7 @@ body {
         height: auto;
         cursor: pointer; /* Ensure cursor changes to pointer */
         display: inline-block;
+        text-align: right;
     }
 
     #menu-button{
