@@ -1,66 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle menu toggle
-    const menuButtonPlus = document.getElementById('menu-button-plus');
-    const menu = document.getElementById('menu');
-    const menuButton = document.getElementById('menu-button');
+    // Function to fetch icon URLs from Cosmic JS based on slug
+    function fetchIconUrl(slug) {
+        return axios.get(`https://api.cosmicjs.com/v3/buckets/portfolio-production-4c75e4f0-4118-11ef-a680-27174bf71a69/object/${slug}?read_key=HFhgQelEwDdUKQovXYNnEQton4QPwnFrlRF1yAAARyIH1zry79&props=slug,title,metadata`)
+            .then(function(response) {
+                const iconObject = response.data.object;
+                return iconObject.metadata.icon.url; // Assuming metadata structure: { icon: { url: '...' } }
+            })
+            .catch(function(error) {
+                console.error('Error fetching icon URL from Cosmic JS:', error);
+                return ''; // Return empty string on error
+            });
+    }
 
-    menuButton.addEventListener('click', function() {
-        menu.classList.toggle('show');
-       
-    });
-
-    menuButtonPlus.addEventListener('click', function() {
-        menu.classList.toggle('show');
-        // Toggle the image between plus and minus
-        if (menu.classList.contains('show')) {
-            menuButtonPlus.src = '/images/-.png';
-        } else {
-            menuButtonPlus.src = '/images/+.png';
-        }
-    });
-
-    // Handle navigation
-    const title = document.getElementById('title');
-    const aboutButton = document.getElementById('menu-button-about');
-    const aboutButtonMobile = document.getElementById('menu-button-about-mobile');
-
-    title.addEventListener('click', function() {
-        window.location.href = 'index.html'; // Change this to your actual URL
-    });
-
-    aboutButton.addEventListener('click', function() {
-        window.location.href = 'about.html'; // Change this to your actual URL
-    });
-
-    aboutButtonMobile.addEventListener('click', function() {
-        window.location.href = 'about.html'; // Change this to your actual URL
-    });
-
-    // Add event listeners to placeholder texts
-    const placeholderTexts = document.querySelectorAll('.placeholder-text');
-    placeholderTexts.forEach(function(placeholder) {
-        placeholder.addEventListener('click', function() {
-            const pageName = placeholder.getAttribute('data-page');
-            if (pageName) {
-                window.location.href = 'pages/' + pageName; // Navigate to the corresponding page within the 'pages' folder
+    Promise.all([
+        fetchIconUrl('icon-mais'),
+        fetchIconUrl('icon-menos')
+    ]).then(function([plusIconUrl, minusIconUrl]) {
+        // Select the + icon element and update its src attribute
+        const menuButtonPlus = document.getElementById('menu-button-plus');
+        menuButtonPlus.src = plusIconUrl;
+        menuButtonPlus.alt = '+'; // Set alt text for the plus icon
+    
+        // Optionally, you can set up a click event listener for the + button
+        menuButtonPlus.addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+    
+            // Toggle the image between plus and minus based on the alt text
+            if (menu.classList.contains('show')) {
+                menuButtonPlus.src = minusIconUrl;
+                menuButtonPlus.alt = '-';
+            } else {
+                menuButtonPlus.src = plusIconUrl;
+                menuButtonPlus.alt = '+';
             }
         });
+    
+    }).catch(function(error) {
+        console.error('Error fetching icons from Cosmic JS:', error);
+    
+        // Optionally, you can set a default icon or handle the error in another way
+        // Example: Set a default icon for both plus and minus buttons
+        const menuButtonPlus = document.getElementById('menu-button-plus');
+        menuButtonPlus.src = 'path_to_default_icon.png';
+        menuButtonPlus.alt = '+';
+    
+        // Handle error state or message to the user
     });
+    
 
-    // Fetch data from Cosmic JS API
+    // Fetch data from Cosmic JS API to get images and metadata
     axios.get('https://api.cosmicjs.com/v3/buckets/portfolio-production-4c75e4f0-4118-11ef-a680-27174bf71a69/objects?pretty=true&query=%7B%22type%22:%22cenas%22%7D&limit=100&read_key=HFhgQelEwDdUKQovXYNnEQton4QPwnFrlRF1yAAARyIH1zry79&depth=1&props=slug,title,metadata')
         .then(function(response) {
             // Handle success, response.data contains the fetched data
             const objects = response.data.objects;
 
-            // Shuffle the array of objects
-            const shuffledObjects = objects.sort(() => Math.random() - 0.5);
-
             // Select the container where images will be appended
             const container = document.getElementById('container');
 
-            // Iterate through the shuffled objects and create img elements
-            shuffledObjects.forEach(function(object) {
+            // Clear container before appending new images
+            container.innerHTML = '';
+
+            // Iterate through the objects and create img elements
+            objects.forEach(function(object) {
                 const imageUrl = object.metadata.cena.url;
                 const tipoText = object.metadata.tipo.value; // Get the 'tipo' text
                 const titleText = object.title; // Get the title text
@@ -110,7 +112,36 @@ document.addEventListener('DOMContentLoaded', function() {
             // Handle error
             console.error('Error fetching data from Cosmic JS:', error);
         });
+
+    // Handle navigation
+    const title = document.getElementById('title');
+    const aboutButton = document.getElementById('menu-button-about');
+    const aboutButtonMobile = document.getElementById('menu-button-about-mobile');
+
+    title.addEventListener('click', function() {
+        window.location.href = 'index.html'; // Change this to your actual URL
+    });
+
+    aboutButton.addEventListener('click', function() {
+        window.location.href = 'about.html'; // Change this to your actual URL
+    });
+
+    aboutButtonMobile.addEventListener('click', function() {
+        window.location.href = 'about.html'; // Change this to your actual URL
+    });
+
+    // Add event listeners to placeholder texts
+    const placeholderTexts = document.querySelectorAll('.placeholder-text');
+    placeholderTexts.forEach(function(placeholder) {
+        placeholder.addEventListener('click', function() {
+            const pageName = placeholder.getAttribute('data-page');
+            if (pageName) {
+                window.location.href = 'pages/' + pageName; // Navigate to the corresponding page within the 'pages' folder
+            }
+        });
+    });
 });
+
 
 
 
