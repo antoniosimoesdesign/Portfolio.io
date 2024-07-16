@@ -208,6 +208,10 @@ body {
     display:none;
 }
 
+button, input, select, textarea, a, img {
+    outline: none;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         height: 580vh;
@@ -247,6 +251,7 @@ body {
         cursor: pointer; /* Ensure cursor changes to pointer */
         display: inline-block;
         text-align: right;
+        outline: none;
       
     }
 
@@ -255,6 +260,7 @@ body {
         width: 40px; /* Adjust the size as needed */
         height: auto;
         cursor: pointer;
+        outline: none;
     }
     
     .menu.show #menu-button-plus {
