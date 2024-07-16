@@ -248,6 +248,7 @@ button, input, select, textarea, a, img {
         font-weight: 900;
         cursor: pointer; /* Change cursor to pointer */
         margin-left: -5px; /* Adjust margin for spacing from the left */
+        -webkit-tap-highlight-color: transparent;
     }
 
     #menu-button-plus {
@@ -257,6 +258,7 @@ button, input, select, textarea, a, img {
         display: inline-block;
         text-align: right;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
       
     }
 
@@ -266,6 +268,7 @@ button, input, select, textarea, a, img {
         height: auto;
         cursor: pointer;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
     #menu-button-plus:focus,
