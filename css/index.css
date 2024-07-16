@@ -215,6 +215,7 @@ body {
 
 
     .container {
+        margin-top: 5em;
         justify-content: center;
     }
 
@@ -240,11 +241,27 @@ body {
     }
 
     #menu-button-plus {
-        width: 90px; /* Adjust the size of the image */
+        width: 40px; /* Adjust the size of the image */
         height: auto;
         cursor: pointer; /* Ensure cursor changes to pointer */
         display: inline-block;
         text-align: right;
+      
+    }
+
+    #menu-button-minus {
+        display: none;
+        width: 40px; /* Adjust the size as needed */
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .menu.show #menu-button-plus {
+        display: none;
+    }
+    
+    .menu.show #menu-button-minus {
+        display: inline-block;
     }
 
     #menu-button{
@@ -291,21 +308,11 @@ body {
         font-weight: 300;
         cursor: pointer; 
     }
+
+    
     
     .placeholder-text:hover {
         text-decoration: underline; 
-    }
-
-    #menu-button-minus {
-        display: none;
-        font-size: 38px; /* Change the size of the - button */
-        position: absolute; /* Position it */
-        right: 20px; /* Adjust the position */
-        top: 12px; /* Adjust the position */
-    }
-
-    #menu-button-minus {
-        display: none;
     }
 
     .placeholder-text-title-title {
