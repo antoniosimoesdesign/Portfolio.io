@@ -212,6 +212,11 @@ button, input, select, textarea, a, img {
     outline: none;
 }
 
+#menu-button-plus:focus,
+#menu-button-minus:focus {
+    outline: none;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         height: 580vh;
@@ -262,6 +267,11 @@ button, input, select, textarea, a, img {
         cursor: pointer;
         outline: none;
     }
+
+    #menu-button-plus:focus,
+#menu-button-minus:focus {
+    outline: none;
+}
     
     .menu.show #menu-button-plus {
         display: none;
