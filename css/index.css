@@ -340,5 +340,13 @@ body {
         cursor: pointer;
     }
 
+    .nav-items {
+        display: flex;
+        gap: 40px;
+        font-size: 30px;
+        font-weight: 900;
+        margin-right: 30px; /* Adjust margin for spacing from the right */
+    }
+
     
   }
