@@ -258,7 +258,7 @@ a {
     #menu-button-plus {
         width: 40px; /* Adjust the size of the image */
         height: auto;
-        cursor: pointer; /* Ensure cursor changes to pointer */
+        cursor:default; /* Ensure cursor changes to pointer */
         display: inline-block;
         text-align: right;
         outline: none;
@@ -270,7 +270,7 @@ a {
         display: none;
         width: 40px; /* Adjust the size as needed */
         height: auto;
-        cursor: pointer;
+        cursor: default;
         outline: none;
         -webkit-tap-highlight-color: transparent;
     }
