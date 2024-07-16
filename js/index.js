@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Handle menu toggle
     const menuButtonPlus = document.getElementById('menu-button-plus');
+    const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
 
     // Variables to store image URLs
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     menuButtonPlus.src = plusImageUrl;
                 }
+            });
+
+            menuButton.addEventListener('click', function() {
+                menu.classList.toggle('show');
             });
         })
         .catch(function(error) {

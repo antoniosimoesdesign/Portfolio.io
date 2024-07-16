@@ -237,7 +237,7 @@ body {
         font-size:24px;
         font-weight: 900;
         cursor: pointer; /* Change cursor to pointer */
-        margin-left: 5px; /* Adjust margin for spacing from the left */
+        margin-left: 1px; /* Adjust margin for spacing from the left */
     }
 
     #menu-button-plus {
