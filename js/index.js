@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add click event listener to the container div
                 containerDiv.addEventListener('click', function() {
                     const pageName = titleText.toLowerCase().replace(/\s+/g, '-') + '.html'; // Convert title to lowercase and replace spaces with dashes
-                    window.location.href = 'pages/' + pageName; // Navigate to the corresponding page within the 'pages' folder
+                    window.location.href =  pageName; // Navigate to the corresponding page within the 'pages' folder
                 });
             });
         })
