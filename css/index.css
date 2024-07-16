@@ -291,7 +291,9 @@ body {
     }
 
     .menu-content {
-        text-align: left; /* Align text to the right */
+        text-align: left;
+       margin-top: 1em;
+/* Align text to the right */
     }
     
     .placeholder-text-title {
