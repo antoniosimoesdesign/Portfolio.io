@@ -237,7 +237,7 @@ body {
         font-size:24px;
         font-weight: 900;
         cursor: pointer; /* Change cursor to pointer */
-        margin-left: 1px; /* Adjust margin for spacing from the left */
+        margin-left: -5px; /* Adjust margin for spacing from the left */
     }
 
     #menu-button-plus {
@@ -277,11 +277,13 @@ body {
         visibility: hidden; /* Make the element invisible */
         background-color: rgba(0, 0, 0, 1); /* Black with 80% opacity */
         color: #FFFFF0;
-        padding: 20px;
+        padding: 0px;
+        padding-left: 14px;
+        padding-right: 14px;
         position: fixed;
         top: 47px; /* Adjust as needed to place below the top bar */
-        width: calc(100% - 47px);
-        left: 5px;
+        width: calc(100% - 40px);
+        left: 1px;
         height: 100%;
         transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth appearance */
         z-index: 1000;
@@ -345,7 +347,7 @@ body {
         gap: 40px;
         font-size: 30px;
         font-weight: 900;
-        margin-right: 30px; /* Adjust margin for spacing from the right */
+        margin-right: 34px; /* Adjust margin for spacing from the right */
     }
 
     
