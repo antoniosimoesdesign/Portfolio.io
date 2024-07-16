@@ -330,7 +330,7 @@ body {
     .placeholder-text-title-title::after {
         content: "";
         display: block;
-        width: calc(100% - 0px); /* Adjust width if necessary */
+        width: calc(100% + 6px); /* Adjust width if necessary */
         height: 1px;
         background-color: #FFFFF0; /* Line color */
         position: absolute;
@@ -347,7 +347,7 @@ body {
         gap: 40px;
         font-size: 30px;
         font-weight: 900;
-        margin-right: 34px; /* Adjust margin for spacing from the right */
+        margin-right: 28px; /* Adjust margin for spacing from the right */
     }
 
     
