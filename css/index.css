@@ -334,13 +334,13 @@ a {
         font-size: 17px;
         margin: 10px 0; /* Standard margin for all items */
         font-weight: 300;
-        cursor: pointer; 
+        cursor: default 
     }
 
     
     
     .placeholder-text:hover {
-        text-decoration: underline; 
+        text-decoration: none; 
     }
 
     .placeholder-text-title-title {
