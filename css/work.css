@@ -301,7 +301,7 @@ button, input, select, textarea, a, img {
         margin: 20px;
         top: 8px; /* Adjust based on your top bar height */
         left: -4px;
-        max-width: 100%; /* Adjust width as needed */
+        max-width: 90%; /* Adjust width as needed */
         color: #FFFFF0;
         margin-top: 5em;
 
