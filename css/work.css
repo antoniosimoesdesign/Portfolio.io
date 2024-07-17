@@ -330,14 +330,11 @@ button, input, select, textarea, a, img {
     }
 
     .work-images {
-        position: relative;
         max-width: 100%; /* Ensures the image doesn't exceed its container */
         height: auto; /* Maintains aspect ratio */
-        max-height: 51vh; /* Limits the maximum height */
+        max-height: 39vh; /* Limits the maximum height */
         margin-top: 0.5em; /* Adjusted margin-top */
-        display: inline-block;
-        overflow: hidden;
-
-
+       
+   
 }
 }
