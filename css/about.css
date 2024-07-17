@@ -384,7 +384,7 @@ button, input, select, textarea, a, img {
 
 .about-info {
     order: 0; /* Ensures the text comes after the image */
-    margin-top: 0.5em; /* Adjust as necessary */
+    margin-top: 1em; /* Adjust as necessary */
 }
 
 
