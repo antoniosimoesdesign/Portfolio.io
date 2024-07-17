@@ -340,7 +340,7 @@ a {
     
     
     .placeholder-text:hover {
-        text-decoration: none; 
+        text-decoration: underline; 
     }
 
     .placeholder-text-title-title {
