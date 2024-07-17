@@ -9,7 +9,6 @@ body {
     height: 220vh;
 }
 
-
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -60,7 +59,6 @@ body {
     position: absolute;
     bottom: 0;
     left: 25px; /* Adjust this value as needed */
-
 }
 
 .menu {
@@ -73,12 +71,11 @@ body {
     top: 57.5px; /* Adjust as needed to place below the top bar */
     width: calc(100% - 47px);
     left: 0px;
- /* Adjust to match left padding of .top-bar */
     transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth appearance */
     z-index: 1000;
 }
 
-#menu-button-plus{
+#menu-button-plus {
     display: none;
 }
 
@@ -111,101 +108,15 @@ body {
     font-size: 20px;
     margin: 10px 0; /* Standard margin for all items */
     font-weight: 300;
-    cursor: pointer; 
-}
-
-.placeholder-text:hover {
-    text-decoration: underline; 
-}
-
-.container {
-    display: flex;
-    /*justify-content: space-evenly; */
-    align-items: baseline;
-    /* background-color: red;*/
-    width: calc(100% - 50px);
-    height: 700px;
-    margin: 0 auto;
-    margin-top: 4.5em;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 1em;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.item {
-    max-width: 100%; /* Ensures the image doesn't exceed its container */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 39.7vh; /* Limits the maximum height */
-    margin-top: 0.5em; /* Adjusted margin-top */
-    transition: filter 0.3s ease; /* Add transition for smooth blur effect */
-}
-
-.item:hover {
-    filter: blur(4px); /* Apply blur effect on hover */
-}
-
-
-.item:nth-of-type(2) {
-    
-   /* Colocar max- height no geral mas fazer a height de cada 1 individualmente*/
-  /* height: 20vh; */
-
-} 
-
-.item-container {
-    position: relative;
-    max-width: 100%; /* Ensures the image doesn't exceed its container */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 39.7vh; /* Limits the maximum height */
-    margin-top: 0.5em; /* Adjusted margin-top */
-    display: inline-block;
-    overflow: hidden;
-}
-
-.item {
-    width: 100%; /* Ensures the image fills its container */
-    height: 100%; /* Ensures the image fills its container */
-    display: block;
-    transition: filter 0.3s ease; /* Add transition for smooth blur effect */
-}
-
-.item-container .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column; /* Stack title and tipo vertically */
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: #FFFFF0;
-    font-size: 20px; /* Adjust the font size as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Add transition for smooth visibility effect */
-    font-weight: 300;
-}
-
-.item-container .overlay-title {
-    font-weight: 700; /* Bold for the title */
-    margin-bottom: 10px; /* Space between title and tipo */
-}
-
-.item-container:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
     cursor: pointer;
 }
 
-.item-container:hover .item {
-    filter: blur(5px); /* Apply blur effect on hover */
-    
+.placeholder-text:hover {
+    text-decoration: underline;
 }
 
 .placeholder-text-title-title {
-    display:none;
+    display: none;
 }
 
 button, input, select, textarea, a, img {
@@ -217,22 +128,40 @@ button, input, select, textarea, a, img {
     outline: none;
 }
 
-.content{
-    top: 50;
-    display: flex;
-    /*justify-content: space-evenly; */
-    align-items: baseline;
-    /* background-color: red;*/
-    width: calc(100% - 50px);
-    height: 700px;
-    margin: 0 auto;
-    margin-top: 4.5em;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 1em;
-    justify-content: space-between;
-    text-align: center;
+.work-info {
+    position: fixed;
+    top: 90px; /* Adjust based on your top bar height */
+    left: 20px;
+    max-width: calc(100% - 75%); /* Adjust width as needed */
     color: #FFFFF0;
+}
+
+.work-text {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.work-description {
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.container-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: calc(100% - 98%); /* Adjust based on your desired position */
+    margin-top: 8.5em; /* Adjust based on your top bar height */
+    gap: 1em;
+}
+
+.work-images {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    margin-top: 0.5em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -241,28 +170,12 @@ button, input, select, textarea, a, img {
         overflow-x: hidden;
     }
 
-
-    .container {
-        margin-top: 5em;
-        justify-content: center;
-    }
-
-    .item-container {
-        position: relative;
-        max-width: 100%; /* Ensures the image doesn't exceed its container */
-        height: auto; /* Maintains aspect ratio */
-        max-height: 51vh; /* Limits the maximum height */
-        margin-top: 0.5em; /* Adjusted margin-top */
-        display: inline-block;
-        overflow: hidden;
-    }
-
     .top-bar::after {
         display: none;
     }
 
     .title {
-        font-size:24px;
+        font-size: 24px;
         font-weight: 900;
         cursor: pointer; /* Change cursor to pointer */
         margin-left: -5px; /* Adjust margin for spacing from the left */
@@ -275,7 +188,6 @@ button, input, select, textarea, a, img {
         display: inline-block;
         text-align: right;
         outline: none;
-      
     }
 
     #menu-button-minus {
@@ -287,23 +199,23 @@ button, input, select, textarea, a, img {
     }
 
     #menu-button-plus:focus,
-#menu-button-minus:focus {
-    outline: none;
-}
-    
+    #menu-button-minus:focus {
+        outline: none;
+    }
+
     .menu.show #menu-button-plus {
         display: none;
     }
-    
+
     .menu.show #menu-button-minus {
         display: inline-block;
     }
 
-    #menu-button{
+    #menu-button {
         display: none;
     }
 
-    #menu-button-about{
+    #menu-button-about {
         display: none;
     }
 
@@ -326,32 +238,29 @@ button, input, select, textarea, a, img {
 
     .menu-content {
         text-align: left;
-       margin-top: 1em;
-/* Align text to the right */
+        margin-top: 1em;
     }
-    
+
     .placeholder-text-title {
         font-size: 18px;
         margin: 0;
         margin-top: 20px; /* Smaller margin at the top */
         font-weight: 700;
     }
-    
+
     .placeholder-text-title:first-of-type {
         margin-top: 0; /* Remove top margin for the first category */
     }
-    
+
     .placeholder-text {
         font-size: 17px;
         margin: 10px 0; /* Standard margin for all items */
         font-weight: 300;
-        cursor: pointer; 
+        cursor: pointer;
     }
 
-    
-    
     .placeholder-text:hover {
-        text-decoration: underline; 
+        text-decoration: underline;
     }
 
     .placeholder-text-title-title {
@@ -363,7 +272,7 @@ button, input, select, textarea, a, img {
         position: relative; /* Necessary for the ::after pseudo-element */
         padding-bottom: 5px; /* Space between text and the line */
     }
-    
+
     .placeholder-text-title-title::after {
         content: "";
         display: block;
@@ -374,8 +283,8 @@ button, input, select, textarea, a, img {
         bottom: 0;
         left: 0px; /* Adjust this value to position the line */
     }
-    
-    #menu-button-about-mobile{
+
+    #menu-button-about-mobile {
         cursor: pointer;
     }
 
@@ -387,44 +296,48 @@ button, input, select, textarea, a, img {
         margin-right: 28px; /* Adjust margin for spacing from the right */
     }
 
-    .item {
-        width: 100%; /* Ensures the image fills its container */
-        height: 100%; /* Ensures the image fills its container */
-        display: block;
-        transition: filter 0.3s ease; /* Add transition for smooth blur effect */
-    }
-    
-    .item-container .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column; /* Stack title and tipo vertically */
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.7);
+    .work-info {
+        position: relative; /* Change from fixed to static for mobile layout */
+        margin: 20px;
+        top: 8px; /* Adjust based on your top bar height */
+        left: -4px;
+        max-width: 100%; /* Adjust width as needed */
         color: #FFFFF0;
-        font-size: 20px; /* Adjust the font size as needed */
-        opacity: 0;
-        transition: opacity 0.3s ease; /* Add transition for smooth visibility effect */
-        font-weight: 300;
-    }
-    
-    .item-container .overlay-title {
-        font-weight: 700; /* Bold for the title */
-        margin-bottom: 10px; /* Space between title and tipo */
-    }
-    
-    .item-container:hover .overlay {
-        opacity: 0; /* Show overlay on hover */
-        cursor: pointer;
-    }
-    
-    .item-container:hover .item {
-        filter: blur(0px); /* Apply blur effect on hover */
-        
+        margin-top: 5em;
+
     }
 
-  }
+
+
+    .work-text {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 1px;
+      
+    }
+    
+    .work-description {
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
+    .container-images {
+        margin-left: 0; /* Reset margin */
+        margin-top: 30px;
+        
+        /* Add some space from the description */
+    }
+
+    .work-images {
+        position: relative;
+        max-width: 100%; /* Ensures the image doesn't exceed its container */
+        height: auto; /* Maintains aspect ratio */
+        max-height: 61.9vh; /* Limits the maximum height */
+        margin-top: 0.5em; /* Adjusted margin-top */
+        display: inline-block;
+        overflow: hidden;
+
+
+}
+}
