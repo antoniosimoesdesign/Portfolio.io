@@ -365,7 +365,7 @@ a {
     }
     
     #menu-button-about-mobile{
-        cursor: pointer;
+        cursor: default;
     }
 
     .nav-items {

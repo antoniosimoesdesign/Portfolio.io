@@ -259,7 +259,7 @@ button, input, select, textarea, a, img {
         font-size: 17px;
         margin: 10px 0; /* Standard margin for all items */
         font-weight: 300;
-        cursor: pointer;
+        cursor: default;
     }
 
     .placeholder-text:hover {
@@ -288,7 +288,7 @@ button, input, select, textarea, a, img {
     }
 
     #menu-button-about-mobile {
-        cursor: pointer;
+        cursor: default;
     }
 
     .nav-items {
