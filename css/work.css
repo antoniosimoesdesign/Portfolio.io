@@ -301,7 +301,7 @@ button, input, select, textarea, a, img {
         margin: 20px;
         top: 8px; /* Adjust based on your top bar height */
         left: -4.8px;
-        max-width: 87%; /* Adjust width as needed */
+        max-width: 90%; /* Adjust width as needed */
         color: #FFFFF0;
         margin-top: 5em;
 
@@ -331,7 +331,7 @@ button, input, select, textarea, a, img {
     .work-images {
         max-width: 90%; /* Ensures the image doesn't exceed its container */
         height: auto; /* Maintains aspect ratio */
-        max-height:51vh; /* Limits the maximum height */
+        max-height:56vh; /* Limits the maximum height */
         margin-top: 0.5em; /* Adjusted margin-top */
        
    
