@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 220vh;
+    height: 110vh;
 }
 
 .top-bar {
@@ -151,7 +151,7 @@ button, input, select, textarea, a, img {
 }
 
 .about-image {
-    max-width: 27%; /* Adjust width as needed */
+    max-width: 30%; /* Adjust width as needed */
     display: flex;
     justify-content: center;
     margin-top: 3em;
