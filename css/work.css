@@ -131,7 +131,7 @@ button, input, select, textarea, a, img {
 .work-info {
     position: fixed;
     top: 90px; /* Adjust based on your top bar height */
-    left: 20px;
+    left: 26px;
     max-width: calc(100% - 75%); /* Adjust width as needed */
     color: #FFFFF0;
 }
@@ -155,6 +155,7 @@ button, input, select, textarea, a, img {
     margin-left: calc(100% - 98%); /* Adjust based on your desired position */
     margin-top: 8.5em; /* Adjust based on your top bar height */
     gap: 1em;
+   
 }
 
 .work-images {
