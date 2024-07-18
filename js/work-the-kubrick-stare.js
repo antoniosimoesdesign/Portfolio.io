@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const image6Url = work.metadata.image6.url;
                 const image7Url = work.metadata.image7.url;
                 const image8Url = work.metadata.image8.url;
+                const image9Url = work.metadata.image9.url;
+                const image10Url = work.metadata.image10.url;
+
 
 
                 // Update the DOM with fetched data
@@ -27,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('work-image-6').src = image6Url;
                 document.getElementById('work-image-7').src = image7Url;
                 document.getElementById('work-image-8').src = image8Url;
+                document.getElementById('work-image-9').src = image9Url;
+                document.getElementById('work-image-10').src = image10Url;
+
             } else {
                 console.error('Work not found.');
             }
