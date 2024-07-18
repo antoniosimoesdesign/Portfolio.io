@@ -159,7 +159,7 @@ button, input, select, textarea, a, img {
 }
 
 .work-images {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     max-height: 80vh;
     margin-top: 0.5em;
