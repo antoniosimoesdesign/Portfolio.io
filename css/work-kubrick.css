@@ -171,7 +171,7 @@ button, input, select, textarea, a, img {
 
 @media only screen and (max-width: 700px) {
     body {
-        height: 580vh;
+        height:fit-content;
         overflow-x: hidden;
     }
 
