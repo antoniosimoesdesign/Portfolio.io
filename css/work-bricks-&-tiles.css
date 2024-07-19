@@ -1,0 +1,351 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body {
+    background-color: #000000;
+    font-family: 'Satoshi', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 220vh;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #000000;
+    color: #FFFFF0;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    padding-bottom: 5px; /* Reduced padding-bottom to bring titles closer to the line */
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: 5px; /* Adjust margin for spacing from the left */
+}
+
+.title:hover {
+    color: #BEBEAF; /* Change color on hover */
+}
+
+.nav-items {
+    display: flex;
+    gap: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 46px; /* Adjust margin for spacing from the right */
+}
+
+.nav-items span {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.nav-items span:hover {
+    color: #BEBEAF; /* Change color on hover */
+}
+
+.top-bar::after {
+    content: "";
+    display: block;
+    width: calc(100% - 90px); /* Adjust this value as needed */
+    height: 1px;
+    background-color: #FFFFF0;
+    position: absolute;
+    bottom: 0;
+    left: 25px; /* Adjust this value as needed */
+}
+
+.menu {
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Make the element invisible */
+    background-color: rgba(0, 0, 0, 0.91); /* Black with 80% opacity */
+    color: #FFFFF0;
+    padding: 20px;
+    position: fixed;
+    top: 57.5px; /* Adjust as needed to place below the top bar */
+    width: calc(100% - 47px);
+    left: 0px;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth appearance */
+    z-index: 1000;
+}
+
+#menu-button-plus {
+    display: none;
+}
+
+#menu-button-minus {
+    display: none;
+}
+
+.menu.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make the element visible */
+}
+
+.menu-content {
+    text-align: right;
+    margin-top: -1em;
+}
+
+.placeholder-text-title {
+    font-size: 21px;
+    margin: 0;
+    margin-top: 20px; /* Smaller margin at the top */
+    font-weight: 700;
+}
+
+.placeholder-text-title:first-of-type {
+    margin-top: 0; /* Remove top margin for the first category */
+}
+
+.placeholder-text {
+    font-size: 20px;
+    margin: 10px 0; /* Standard margin for all items */
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.placeholder-text:hover {
+    text-decoration: underline;
+}
+
+.placeholder-text-title-title {
+    display: none;
+}
+
+button, input, select, textarea, a, img {
+    outline: none;
+}
+
+#menu-button-plus:focus,
+#menu-button-minus:focus {
+    outline: none;
+}
+
+.work-info {
+    position: fixed;
+    top: 90px; /* Adjust based on your top bar height */
+    left: 26px;
+    max-width: calc(100% - 75%); /* Adjust width as needed */
+    color: #FFFFF0;
+}
+
+.work-text {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.work-description {
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.container-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: calc(100% - 98%); /* Adjust based on your desired position */
+    margin-top: 8.5em; /* Adjust based on your top bar height */
+    gap: 1em;
+   
+}
+
+.work-images {
+    max-width: 50%;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 0.5em;
+}
+
+.seta-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        height:fit-content;
+        overflow-x: hidden;
+    }
+
+    .top-bar::after {
+        display: none;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 900;
+        cursor: default; /* Change cursor to pointer */
+        margin-left: -5px; /* Adjust margin for spacing from the left */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #menu-button-plus {
+        width: 40px; /* Adjust the size of the image */
+        height: auto;
+        cursor: default; /* Ensure cursor changes to pointer */
+        display: inline-block;
+        text-align: right;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #menu-button-minus {
+        display: none;
+        width: 40px; /* Adjust the size as needed */
+        height: auto;
+        cursor: default;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #menu-button-plus:focus,
+    #menu-button-minus:focus {
+        outline: none;
+    }
+
+    .menu.show #menu-button-plus {
+        display: none;
+    }
+
+    .menu.show #menu-button-minus {
+        display: inline-block;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    #menu-button-about {
+        display: none;
+    }
+
+    .menu {
+        opacity: 0; /* Hidden by default */
+        visibility: hidden; /* Make the element invisible */
+        background-color: rgba(0, 0, 0, 1); /* Black with 80% opacity */
+        color: #FFFFF0;
+        padding: 0px;
+        padding-left: 14px;
+        padding-right: 14px;
+        position: fixed;
+        top: 47px; /* Adjust as needed to place below the top bar */
+        width: calc(100% - 40px);
+        left: 1px;
+        height: 100%;
+        transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth appearance */
+        z-index: 1000;
+    }
+
+    .menu-content {
+        text-align: left;
+        margin-top: 1em;
+    }
+
+    .placeholder-text-title {
+        font-size: 18px;
+        margin: 0;
+        margin-top: 20px; /* Smaller margin at the top */
+        font-weight: 700;
+    }
+
+    .placeholder-text-title:first-of-type {
+        margin-top: 0; /* Remove top margin for the first category */
+    }
+
+    .placeholder-text {
+        font-size: 17px;
+        margin: 10px 0; /* Standard margin for all items */
+        font-weight: 300;
+        cursor: default;
+    }
+
+    .placeholder-text:hover {
+        text-decoration: underline;
+    }
+
+    .placeholder-text-title-title {
+        display: block;
+        font-size: 30px;
+        margin: 0;
+        margin-top: 15px; /* Adjust this value if needed */
+        font-weight: 900;
+        position: relative; /* Necessary for the ::after pseudo-element */
+        padding-bottom: 5px; /* Space between text and the line */
+    }
+
+    .placeholder-text-title-title::after {
+        content: "";
+        display: block;
+        width: calc(100% + 6px); /* Adjust width if necessary */
+        height: 1px;
+        background-color: #FFFFF0; /* Line color */
+        position: absolute;
+        bottom: 0;
+        left: 0px; /* Adjust this value to position the line */
+    }
+
+    #menu-button-about-mobile {
+        cursor: default;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 40px;
+        font-size: 30px;
+        font-weight: 900;
+        margin-right: 28px; /* Adjust margin for spacing from the right */
+    }
+
+    .work-info {
+        position: relative; /* Change from fixed to static for mobile layout */
+        margin: 20px;
+        top: 8px; /* Adjust based on your top bar height */
+        left: -4.8px;
+        max-width: 90%; /* Adjust width as needed */
+        color: #FFFFF0;
+        margin-top: 5em;
+
+    }
+
+    .work-text {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 1px;
+      
+    }
+    
+    .work-description {
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
+    .container-images {
+        margin-left: 0; /* Reset margin */
+        margin-top: 30px;
+        /* Add some space from the description */
+    }
+
+    .work-images {
+        max-width: 90%; /* Ensures the image doesn't exceed its container */
+        height: auto; /* Maintains aspect ratio */
+        max-height:56vh; /* Limits the maximum height */
+        margin-top: 0.5em; /* Adjusted margin-top */
+}
+
+.seta-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 20px auto;
+    cursor: default;
+}
+}
