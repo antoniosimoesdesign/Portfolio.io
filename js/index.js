@@ -1,107 +1,121 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Define the images and their details
+    const images = [
+        {
+            url: 'https://cdn.cosmicjs.com/5116d8b0-41e6-11ef-bfb7-a598d323cbfc-tracklist.gif',
+            title: 'Music Portfolio',
+            tipo: 'Website'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/6099ab80-41e3-11ef-bfb7-a598d323cbfc-fita-gif.gif',
+            title: 'FITA',
+            tipo: 'Website'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/23fc1450-41df-11ef-bfb7-a598d323cbfc-n1.gif',
+            title: 'The Kubrick Stare',
+            tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/6dd47500-41de-11ef-bfb7-a598d323cbfc-Screenshot_1.png',
+            title: 'The Kubrick Stare',
+            tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/0831c7c0-41de-11ef-bfb7-a598d323cbfc-1.-colnia-balnear.png',
+            title: 'Ya e tu',
+            tipo: 'Artwork'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/c3339450-41dd-11ef-bfb7-a598d323cbfc-PAC-1-FINAL-2.gif',
+            title: 'Plasticidade',
+            tipo: 'Video'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/3bbc78c0-41dd-11ef-bfb7-a598d323cbfc-3.jpg',
+            title: 'Bricks & Tiles',
+            tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/14c72cb0-41dd-11ef-bfb7-a598d323cbfc-PAC-1-FINAL-2.00_01_01_09.Still001.jpg',
+            title: 'Plasticidade',
+            tipo: 'Video'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/cdcc65f0-41dc-11ef-bfb7-a598d323cbfc-3.-vegetao.png',
+            title: 'Ya e tu',
+            tipo: 'Artwork'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/a3fa11a0-41dc-11ef-bfb7-a598d323cbfc-10.jpg',
+            title: 'Taped',
+            tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/d0ad0d20-41db-11ef-bfb7-a598d323cbfc-pac-3-gif-2.gif',
+            title: 'Human',
+            tipo: 'Video'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/f41c0d20-4121-11ef-bfb7-a598d323cbfc-final.jpg',
+            title: 'Running Man',
+            tipo: 'Artwork'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/a6040b20-411b-11ef-bfb7-a598d323cbfc-2-crop-2.png',
+            title: 'Bricks & Tiles',
+            tipo: 'Generative Design'
+        },
 
 
-    // Fetch data from Cosmic JS API
-    axios.get('https://api.cosmicjs.com/v3/buckets/portfolio-production-4c75e4f0-4118-11ef-a680-27174bf71a69/objects?pretty=true&query=%7B%22type%22:%22cenas%22%7D&limit=100&read_key=HFhgQelEwDdUKQovXYNnEQton4QPwnFrlRF1yAAARyIH1zry79&depth=1&props=slug,title,metadata')
-        .then(function(response) {
-            const objects = response.data.objects;
+    ];
 
-            // Shuffle the array of objects
-            const shuffledObjects = objects.sort(() => Math.random() - 0.5);
+    // Shuffle the array of images (optional)
+    const shuffledImages = images.sort(() => Math.random() - 0.5);
 
-            // Select the container where images will be appended
-            const container = document.getElementById('container');
+    // Select the container where images will be appended
+    const container = document.getElementById('container');
 
-            // Iterate through the shuffled objects and create img elements
-            shuffledObjects.forEach(function(object) {
-                const imageUrl = object.metadata.cena.url;
-                const tipoText = object.metadata.tipo.value; // Get the 'tipo' text
-                const titleText = object.title; // Get the title text
+    // Iterate through the shuffled images and create img elements
+    shuffledImages.forEach(function(image) {
+        const img = document.createElement('img');
+        img.src = image.url;
+        img.alt = image.title || ''; // Set alt text if title is available
+        img.classList.add('item'); // Add a class for styling purposes
 
-                const img = document.createElement('img');
-                img.src = imageUrl;
-                img.alt = titleText || ''; // Set alt text if title is available
-                img.classList.add('item'); // Add a class for styling purposes
+        // Create a container div for the image and overlay
+        const containerDiv = document.createElement('div');
+        containerDiv.classList.add('item-container');
 
-                // Create a container div for the image and overlay
-                const containerDiv = document.createElement('div');
-                containerDiv.classList.add('item-container');
+        // Create the overlay div
+        const overlayDiv = document.createElement('div');
+        overlayDiv.classList.add('overlay');
 
-                // Create the overlay div
-                const overlayDiv = document.createElement('div');
-                overlayDiv.classList.add('overlay');
+        // Create title element
+        const titleElement = document.createElement('div');
+        titleElement.classList.add('overlay-title');
+        titleElement.textContent = image.title; // Set the title text
 
-                // Create title element
-                const titleElement = document.createElement('div');
-                titleElement.classList.add('overlay-title');
-                titleElement.textContent = titleText; // Set the title text
+        // Create tipo element
+        const tipoElement = document.createElement('div');
+        tipoElement.classList.add('overlay-tipo');
+        tipoElement.textContent = image.tipo; // Set the 'tipo' text
 
-                // Create tipo element
-                const tipoElement = document.createElement('div');
-                tipoElement.classList.add('overlay-tipo');
-                tipoElement.textContent = tipoText; // Set the 'tipo' text
+        // Append title and tipo to the overlay div
+        overlayDiv.appendChild(titleElement);
+        overlayDiv.appendChild(tipoElement);
 
-                // Append title and tipo to the overlay div
-                overlayDiv.appendChild(titleElement);
-                overlayDiv.appendChild(tipoElement);
+        // Append the image and overlay to the container div
+        containerDiv.appendChild(img);
+        containerDiv.appendChild(overlayDiv);
 
-                // Append the image and overlay to the container div
-                containerDiv.appendChild(img);
-                containerDiv.appendChild(overlayDiv);
+        // Append the container div to the main container
+        container.appendChild(containerDiv);
 
-                // Append the container div to the main container
-                container.appendChild(containerDiv);
-
-                // Add click event listener to the container div
-                containerDiv.addEventListener('click', function() {
-                    const pageName = titleText.toLowerCase().replace(/\s+/g, '-') + '.html'; // Convert title to lowercase and replace spaces with dashes
-                    window.location.href =  pageName; // Navigate to the corresponding page within the 'pages' folder
-                });
-            });
-        })
-        .catch(function(error) {
-            console.error('Error fetching data from Cosmic JS:', error);
+        // Add click event listener to the container div
+        containerDiv.addEventListener('click', function() {
+            const pageName = image.title.toLowerCase().replace(/\s+/g, '-') + '.html'; // Convert title to lowercase and replace spaces with dashes
+            window.location.href = pageName; // Navigate to the corresponding page within the 'pages' folder
         });
-
-
-
-
-
-//Sem Random
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuButton = document.getElementById('menu-button');
-//     const menu = document.getElementById('menu');
-
-//     menuButton.addEventListener('click', function() {
-//         menu.classList.toggle('show');
-//     });
-// });
-
-// // Wait for the DOM content to be fully loaded
-// document.addEventListener("DOMContentLoaded", function() {
-//     // Fetch data from Cosmic JS API
-//     axios.get('https://api.cosmicjs.com/v3/buckets/portfolio-production-4c75e4f0-4118-11ef-a680-27174bf71a69/objects?pretty=true&query=%7B%22type%22:%22cenas%22%7D&limit=100&read_key=HFhgQelEwDdUKQovXYNnEQton4QPwnFrlRF1yAAARyIH1zry79&depth=1&props=slug,title,metadata')
-//         .then(function(response) {
-//             // Handle success, response.data contains the fetched data
-//             const objects = response.data.objects;
-
-//             // Select the container where images will be appended
-//             const container = document.getElementById('container');
-
-//             // Iterate through the objects and create img elements
-// // Inside your fetch and display images block
-// objects.forEach(function(object) {
-//     const imageUrl = object.metadata.cena.url;
-//     const img = document.createElement('img');
-//     img.src = imageUrl;
-//     img.alt = object.title || ''; // Set alt text if title is available
-//     img.classList.add('item'); // Add a class for styling purposes
-//     container.appendChild(img);
-// });
-
-//         })
-//         .catch(function(error) {
-//             // Handle error
-//             console.error('Error fetching data from Cosmic JS:', error);
-//         });
-// });
+    });
+});
