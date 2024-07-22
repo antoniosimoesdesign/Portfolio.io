@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    height: 220vh;
+    height: 100%;
 }
 
 
@@ -221,6 +221,11 @@ a {
     outline: none;
 }
 
+.footer {
+    height: 50vh; /* Adjust the height as needed */
+    background-color: black;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         height: 580vh;
@@ -415,5 +420,4 @@ a {
         filter: blur(0px); /* Apply blur effect on hover */
         
     }
-
   }
