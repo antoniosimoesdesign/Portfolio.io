@@ -222,13 +222,13 @@ a {
 }
 
 .footer {
-    height: 50vh; /* Adjust the height as needed */
+    height: 80vh; /* Adjust the height as needed */
     background-color: black;
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        height: 580vh;
+        height: 180vh;
         overflow-x: hidden;
     }
 
@@ -419,5 +419,10 @@ a {
     .item-container:hover .item {
         filter: blur(0px); /* Apply blur effect on hover */
         
+    }
+
+    .footer {
+        height: 450vh; /* Adjust the height as needed */
+        background-color: black;
     }
   }
