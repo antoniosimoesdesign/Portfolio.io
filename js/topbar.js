@@ -4,45 +4,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
 
-    // Variables to store image URLs
-    let plusImageUrl = '';
-    let minusImageUrl = '';
+    // Static URLs for the plus and minus icons
+    const plusImageUrl = 'https://cdn.cosmicjs.com/f4eb09e0-42b6-11ef-bfb7-a598d323cbfc-.png'; // Replace with your actual URL
+    const minusImageUrl = 'https://cdn.cosmicjs.com/09f7ae10-42b7-11ef-bfb7-a598d323cbfc--.png'; // Replace with your actual URL
 
-    // Fetch image URLs from Cosmic JS
-    axios.get('https://api.cosmicjs.com/v3/buckets/portfolio-production-4c75e4f0-4118-11ef-a680-27174bf71a69/objects?pretty=true&query=%7B%22type%22:%22simbolos%22%7D&limit=10&read_key=HFhgQelEwDdUKQovXYNnEQton4QPwnFrlRF1yAAARyIH1zry79&depth=1&props=slug,title,metadata')
-        .then(function(response) {
-            const objects = response.data.objects;
+    // Set initial image
+    menuButtonPlus.src = plusImageUrl;
 
-            // Extract URLs for the plus and minus icons
-            objects.forEach(function(object) {
-                if (object.slug === 'icon-mais') {
-                    plusImageUrl = object.metadata.icones.url;
-                } else if (object.slug === 'icon-menos') {
-                    minusImageUrl = object.metadata.icones.url;
-                }
-            });
+    menuButtonPlus.addEventListener('click', function() {
+        menu.classList.toggle('show');
 
-            // Set initial image
+        // Toggle the image between plus and minus
+        if (menu.classList.contains('show')) {
+            menuButtonPlus.src = minusImageUrl;
+        } else {
             menuButtonPlus.src = plusImageUrl;
+        }
+    });
 
-            menuButtonPlus.addEventListener('click', function() {
-                menu.classList.toggle('show');
-
-                // Toggle the image between plus and minus
-                if (menu.classList.contains('show')) {
-                    menuButtonPlus.src = minusImageUrl;
-                } else {
-                    menuButtonPlus.src = plusImageUrl;
-                }
-            });
-
-            menuButton.addEventListener('click', function() {
-                menu.classList.toggle('show');
-            });
-        })
-        .catch(function(error) {
-            console.error('Error fetching data from Cosmic JS:', error);
-        });
+    menuButton.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
 
     // Handle navigation
     const title = document.getElementById('title');
