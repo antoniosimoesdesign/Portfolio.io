@@ -422,7 +422,7 @@ a {
     }
 
     .footer {
-        height: 450vh; /* Adjust the height as needed */
+        height: 0vh; /* Adjust the height as needed */
         background-color: black;
     }
   }
