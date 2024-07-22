@@ -184,19 +184,6 @@ button, input, select, textarea, a, img {
 
 @media only screen and (max-width: 600px) {
 
-    .footer {
-        height: 50px; /* Adjust the height as needed */
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        text-align: center;
-        padding-top: 1em;
-        margin-left: 0em;
-        color: #BEBEAF;;
-        font-size: 14px;
-    }
-    
     body {
         height:fit-content;
         overflow-x: hidden;
@@ -375,4 +362,17 @@ button, input, select, textarea, a, img {
     margin: 20px auto;
     cursor: default;
 }
+.footer {
+    height: 50px; /* Adjust the height as needed */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    padding-top: 1em;
+    margin-left: 0em;
+    color: #BEBEAF;;
+    font-size: 14px;
+}
+
 }
