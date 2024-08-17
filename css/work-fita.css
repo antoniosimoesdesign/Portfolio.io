@@ -148,6 +148,14 @@ button, input, select, textarea, a, img {
     margin-top: 20px;
 }
 
+.work-description a{
+    color: #FFFFEA; /* Replace with your desired color */
+    text-decoration: underline; /* Ensure the link is underlined */
+    margin-left: 0em;
+}
+
+
+
 .container-images {
     display: flex;
     flex-direction: column;
