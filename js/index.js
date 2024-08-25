@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tipo: 'Video'
         },
         {
-            url: 'https://cdn.cosmicjs.com/cdcc65f0-41dc-11ef-bfb7-a598d323cbfc-3.-vegetao.png',
+            url: 'https://cdn.cosmicjs.com/67a56d80-444d-11ef-bfb7-a598d323cbfc-2.-44.png',
             title: 'Ya e tu',
             tipo: 'Artwork'
         },
@@ -65,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
             url: 'https://cdn.cosmicjs.com/a6040b20-411b-11ef-bfb7-a598d323cbfc-2-crop-2.png',
             title: 'Bricks & Tiles',
             tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/f5ac3cd0-620c-11ef-a492-5bdc7520fe60-video_main_sitegif.gif',
+            title: 'Plantas do Cabedelo',
+            tipo: 'Website'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/6724da20-620d-11ef-a492-5bdc7520fe60-Poster-1.jpg',
+            title: 'Plantas do Cabedelo',
+            tipo: 'Website'
         },
 
 
