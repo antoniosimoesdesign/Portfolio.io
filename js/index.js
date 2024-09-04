@@ -76,6 +76,17 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Plantas do Cabedelo',
             tipo: 'Website'
         },
+        {
+            url: 'https://cdn.cosmicjs.com/a5def620-6acc-11ef-a492-5bdc7520fe60-gif-pontao2.gif',
+            title: 'Pontão do Cabedelo',
+            tipo: 'Generative Design'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/d33dcc90-6acc-11ef-a492-5bdc7520fe60-generated_image-22.png',
+            title: 'Pontão do Cabedelo',
+            tipo: 'Generative Design'
+        },
+        
 
 
     ];
