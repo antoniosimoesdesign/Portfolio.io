@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = document.createElement('img');
         img.src = image.url;
         img.alt = image.title || ''; // Set alt text if title is available
+        img.loading = 'lazy'; // Add lazy loading
         img.classList.add('item'); // Add a class for styling purposes
 
         // Create a container div for the image and overlay
