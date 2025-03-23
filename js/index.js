@@ -86,6 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Pontão do Cabedelo',
             tipo: 'Generative Design'
         },
+        {
+            url: 'https://cdn.cosmicjs.com/d0b629b0-07f0-11f0-9dbf-1f168280b824-video2.gif',
+            title: 'SUPPORT',
+            tipo: 'Stickers'
+        },
         
 
 
