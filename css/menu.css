@@ -7,22 +7,22 @@
     padding: 12px 20px;
     background-color: #000000;
     color: #FFFFF0;
-    position: fixed; /* Fixed position to stay at the top */
-    top: 0; /* Position it at the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays above other elements */
-    padding-bottom: 5px; /* Reduced padding-bottom to bring titles closer to the line */
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    z-index: 1000; 
+    padding-bottom: 5px; 
 }
 
 .title {
     font-size: 30px;
     font-weight: 900;
-    cursor: pointer; /* Change cursor to pointer */
-    margin-left: 5px; /* Adjust margin for spacing from the left */
+    cursor: pointer; 
+    margin-left: 5px; 
 }
 
 .title:hover {
-    color: #BEBEAF; /* Change color on hover */
+    color: #BEBEAF; 
 }
 
 .nav-items {
@@ -30,43 +30,43 @@
     gap: 40px;
     font-size: 30px;
     font-weight: 900;
-    margin-right: 46px; /* Adjust margin for spacing from the right */
+    margin-right: 46px; 
 }
 
 .nav-items span {
-    cursor: pointer; /* Change cursor to pointer */
+    cursor: pointer; 
 }
 
 .nav-items span:hover {
-    color: #BEBEAF; /* Change color on hover */
+    color: #BEBEAF; 
 }
 
 .top-bar::after {
     content: "";
     display: block;
-    width: calc(100% - 90px); /* Adjust this value as needed */
+    width: calc(100% - 90px); 
     height: 1px;
     background-color: #FFFFF0;
     position: absolute;
     bottom: 0;
-    left: 25px; /* Adjust this value as needed */
+    left: 25px; 
 
 }
 
 .menu {
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Make the element invisible */
-    background-color: rgba(0, 0, 0, 0.91); /* Black with 91% opacity */
+    opacity: 0; 
+    visibility: hidden; 
+    background-color: rgba(0, 0, 0, 0.91); 
     color: #FFFFF0;
     padding: 20px;
     position: fixed;
-    top: 57.5px; /* Adjust as needed to place below the top bar */
+    top: 57.5px; 
     left: 0;
     width: 100%;
-    height: 100vh; /* Ensure it takes the full height of the viewport */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth appearance transition */
+    height: 100vh; 
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
     z-index: 1000;
-    overflow-y: auto; /* Enable scrolling if needed */
+    overflow-y: auto; 
 }
 
 #menu-button-plus{
@@ -78,21 +78,21 @@
 }
 
 .menu.show {
-    opacity: 1; /* Fully visible */
-    visibility: visible; /* Make the element visible */
+    opacity: 1; 
+    visibility: visible; 
 }
 
 .menu-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; /* Adjust the spacing between sections */
+    gap: 40px; 
     margin-left: 0.4em;
 }
 
 .menu-column {
     display: flex;
     flex-direction: column;
-    min-width: 200px; /* Adjust the minimum width */
+    min-width: 200px; 
 }
 
 .placeholder-text-title {
@@ -126,15 +126,15 @@
     .title {
         font-size:24px;
         font-weight: 900;
-        cursor: pointer; /* Change cursor to pointer */
-        margin-left: -5px; /* Adjust margin for spacing from the left */
+        cursor: pointer; 
+        margin-left: -5px; 
         -webkit-tap-highlight-color: transparent;
     }
 
     #menu-button-plus {
-        width: 40px; /* Adjust the size of the image */
+        width: 40px; 
         height: auto;
-        cursor:default; /* Ensure cursor changes to pointer */
+        cursor:default;
         display: inline-block;
         text-align: right;
         outline: none;
@@ -144,7 +144,7 @@
 
     #menu-button-minus {
         display: none;
-        width: 40px; /* Adjust the size as needed */
+        width: 40px; 
         height: auto;
         cursor: default;
         outline: none;
@@ -173,18 +173,18 @@
     }
 
     .menu {
-        opacity: 0; /* Hidden by default */
-        visibility: hidden; /* Make the element invisible */
-        background-color: rgba(0, 0, 0, 1); /* Black with 80% opacity */
+        opacity: 0; 
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 1); 
         color: #FFFFF0;
         padding: 0px;
         padding-left: 14px;
         padding-right: 14px;
         position: fixed;
-        top: 47px; /* Adjust as needed to place below the top bar */
+        top: 47px;
         width: calc(100% - 40px);
         left: 1px;
-        transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth appearance */
+        transition: opacity 0.5s ease, visibility 0.5s ease;
         height: 100vh !important;
         z-index: 1000;
     }
@@ -192,32 +192,32 @@
     
 
     .menu-content {
-        display: block; /* Stack all items vertically */
+        display: block; 
         text-align: left;
         margin-top: 1em;
         margin-left: 0em;
-        height: 80vh; /* Allow content to take up to 80% of the screen height */
-        overflow-y: auto; /* Enable scrolling if content exceeds max height */
+        height: 80vh; 
+        overflow-y: auto; 
         overflow-x: hidden;
     }
 
     .menu-column {
-        display: block; /* Prevent column stacking */
+        display: block;
     }
     .placeholder-text-title {
         font-size: 18px;
         margin: 0;
-        margin-top: 30px; /* Smaller margin at the top */
+        margin-top: 30px; 
         font-weight: 700;
     }
     
     .placeholder-text-title:first-of-type {
-        margin-top: 5; /* Remove top margin for the first category */
+        margin-top: 5; 
     }
     
     .placeholder-text {
         font-size: 17px;
-        margin: 10px 0; /* Standard margin for all items */
+        margin: 10px 0;
         font-weight: 300;
         cursor: default 
     }
@@ -232,21 +232,21 @@
         display: block;
         font-size: 30px;
         margin: 0;
-        margin-top: 15px; /* Adjust this value if needed */
+        margin-top: 15px;
         font-weight: 900;
-        position: relative; /* Necessary for the ::after pseudo-element */
-        padding-bottom: 5px; /* Space between text and the line */
+        position: relative;
+        padding-bottom: 5px; 
     }
     
     .placeholder-text-title-title::after {
         content: "";
         display: block;
-        width: calc(100% + 6px); /* Adjust width if necessary */
+        width: calc(100% + 6px); 
         height: 1px;
-        background-color: #FFFFF0; /* Line color */
+        background-color: #FFFFF0; 
         position: absolute;
         bottom: 0;
-        left: 0px; /* Adjust this value to position the line */
+        left: 0px; 
     }
     
     #menu-button-about-mobile{
@@ -258,7 +258,7 @@
         gap: 40px;
         font-size: 30px;
         font-weight: 900;
-        margin-right: 28px; /* Adjust margin for spacing from the right */
+        margin-right: 28px; 
     }
  
   }

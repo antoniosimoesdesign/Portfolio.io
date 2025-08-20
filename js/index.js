@@ -96,53 +96,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     ];
 
-    // Shuffle the array of images (optional)
     const shuffledImages = images.sort(() => Math.random() - 0.5);
 
-    // Select the container where images will be appended
+
     const container = document.getElementById('container');
 
-    // Iterate through the shuffled images and create img elements
+
     shuffledImages.forEach(function(image) {
         const img = document.createElement('img');
         img.src = image.url;
-        img.alt = image.title || ''; // Set alt text if title is available
-        img.loading = 'lazy'; // Add lazy loading
-        img.classList.add('item'); // Add a class for styling purposes
+        img.alt = image.title || ''; 
+        img.loading = 'lazy'; 
+        img.classList.add('item'); 
 
-        // Create a container div for the image and overlay
+
         const containerDiv = document.createElement('div');
         containerDiv.classList.add('item-container');
 
-        // Create the overlay div
+  
         const overlayDiv = document.createElement('div');
         overlayDiv.classList.add('overlay');
 
-        // Create title element
+
         const titleElement = document.createElement('div');
         titleElement.classList.add('overlay-title');
-        titleElement.textContent = image.title; // Set the title text
+        titleElement.textContent = image.title;
 
-        // Create tipo element
+
         const tipoElement = document.createElement('div');
         tipoElement.classList.add('overlay-tipo');
-        tipoElement.textContent = image.tipo; // Set the 'tipo' text
+        tipoElement.textContent = image.tipo; 
 
-        // Append title and tipo to the overlay div
+
         overlayDiv.appendChild(titleElement);
         overlayDiv.appendChild(tipoElement);
 
-        // Append the image and overlay to the container div
+
         containerDiv.appendChild(img);
         containerDiv.appendChild(overlayDiv);
 
-        // Append the container div to the main container
+
         container.appendChild(containerDiv);
 
-        // Add click event listener to the container div
         containerDiv.addEventListener('click', function() {
-            const pageName = image.title.toLowerCase().replace(/\s+/g, '-') + '.html'; // Convert title to lowercase and replace spaces with dashes
-            window.location.href = pageName; // Navigate to the corresponding page within the 'pages' folder
+            const pageName = image.title.toLowerCase().replace(/\s+/g, '-') + '.html'; 
+            window.location.href = pageName; 
         });
     });
 });

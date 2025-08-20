@@ -20,9 +20,9 @@ button, input, select, textarea, a, img {
 
 .work-info {
     position: fixed;
-    top: 90px; /* Adjust based on your top bar height */
+    top: 90px; 
     left: 26px;
-    max-width: calc(100% - 75%); /* Adjust width as needed */
+    max-width: calc(100% - 75%); 
     color: #FFFFF0;
 }
 
@@ -39,8 +39,8 @@ button, input, select, textarea, a, img {
 }
 
 .work-description a{
-    color: #FFFFEA; /* Replace with your desired color */
-    text-decoration: underline; /* Ensure the link is underlined */
+    color: #FFFFEA; 
+    text-decoration: underline; 
     margin-left: 0em;
 }
 
@@ -48,8 +48,8 @@ button, input, select, textarea, a, img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: calc(100% - 98%); /* Adjust based on your desired position */
-    margin-top: 8.5em; /* Adjust based on your top bar height */
+    margin-left: calc(100% - 98%); 
+    margin-top: 8.5em; 
     gap: 1em;
    
 }
@@ -66,7 +66,7 @@ button, input, select, textarea, a, img {
 }
 
 .footer {
-    height: 50px; /* Adjust the height as needed */
+    height: 50px; 
     background-color: black;
     display: flex;
     justify-content: left;
@@ -94,11 +94,11 @@ button, input, select, textarea, a, img {
 
 
     .work-info {
-        position: relative; /* Change from fixed to static for mobile layout */
+        position: relative; 
         margin: 20px;
-        top: 8px; /* Adjust based on your top bar height */
+        top: 8px; 
         left: -4.8px;
-        max-width: 90%; /* Adjust width as needed */
+        max-width: 90%; 
         color: #FFFFF0;
         margin-top: 5em;
 
@@ -118,16 +118,15 @@ button, input, select, textarea, a, img {
     }
 
     .container-images {
-        margin-left: 0; /* Reset margin */
+        margin-left: 0; 
         margin-top: 30px;
-        /* Add some space from the description */
     }
 
     .work-images {
-        max-width: 90%; /* Ensures the image doesn't exceed its container */
-        height: auto; /* Maintains aspect ratio */
-        max-height:56vh; /* Limits the maximum height */
-        margin-top: 0.5em; /* Adjusted margin-top */
+        max-width: 90%; 
+        height: auto;
+        max-height:56vh; 
+        margin-top: 0.5em; 
 }
 
 .seta-icon {
@@ -139,7 +138,7 @@ button, input, select, textarea, a, img {
 }
 
 .footer {
-    height: 50px; /* Adjust the height as needed */
+    height: 50px;
     background-color: black;
     display: flex;
     justify-content: center;
