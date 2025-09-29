@@ -37,16 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             tipo: 'Generative Design'
         },
         {
-            url: 'https://cdn.cosmicjs.com/14c72cb0-41dd-11ef-bfb7-a598d323cbfc-PAC-1-FINAL-2.00_01_01_09.Still001.jpg',
-            title: 'Plasticidade',
-            tipo: 'Video'
-        },
-        {
-            url: 'https://cdn.cosmicjs.com/67a56d80-444d-11ef-bfb7-a598d323cbfc-2.-44.png',
-            title: 'Ya e tu',
-            tipo: 'Artwork'
-        },
-        {
             url: 'https://cdn.cosmicjs.com/a3fa11a0-41dc-11ef-bfb7-a598d323cbfc-10.jpg',
             title: 'Taped',
             tipo: 'Generative Design'
@@ -82,14 +72,39 @@ document.addEventListener('DOMContentLoaded', function() {
             tipo: 'Generative Design'
         },
         {
-            url: 'https://cdn.cosmicjs.com/d33dcc90-6acc-11ef-a492-5bdc7520fe60-generated_image-22.png',
-            title: 'Pontão do Cabedelo',
-            tipo: 'Generative Design'
-        },
-        {
             url: 'https://cdn.cosmicjs.com/d0b629b0-07f0-11f0-9dbf-1f168280b824-video2.gif',
             title: 'SUPPORT',
             tipo: 'Stickers'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/d14ff610-9d48-11f0-bba7-d56988718db7-doseadoresmainpage.jpg',
+            title: 'Soap Dispensers',
+            tipo: 'Ceramic 3D Printing'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/e9624b10-9d46-11f0-bba7-d56988718db7-doseadoresmain4.mp4',
+            title: 'Soap Dispensers',
+            tipo: 'Ceramic 3D Printing'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/0fda77e0-9d47-11f0-bba7-d56988718db7-ctcv40yearvideomain.mp4',
+            title: 'CTCV 40 Year Anniversary',
+            tipo: 'Ceramic 3D Printing'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/f4094620-9d48-11f0-bba7-d56988718db7-ctcvmain.jpg',
+            title: 'CTCV 40 Year Anniversary',
+            tipo: 'Ceramic 3D Printing'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/2c64d590-9d47-11f0-bba7-d56988718db7-lampshadeprinting.mp4',
+            title: 'Lampshades',
+            tipo: 'Ceramic 3D Printing'
+        },
+        {
+            url: 'https://cdn.cosmicjs.com/4b669be0-9d47-11f0-bba7-d56988718db7-lampshaderotation.mp4',
+            title: 'Lampshades',
+            tipo: 'Ceramic 3D Printing'
         },
         
 
@@ -102,45 +117,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('container');
 
 
-    shuffledImages.forEach(function(image) {
-        const img = document.createElement('img');
-        img.src = image.url;
-        img.alt = image.title || ''; 
-        img.loading = 'lazy'; 
-        img.classList.add('item'); 
+shuffledImages.forEach(function(image) {
+    let mediaElement;
+
+    if (image.url.toLowerCase().endsWith('.mp4')) {
+        // Create a video element for mp4 files
+        mediaElement = document.createElement('video');
+        mediaElement.src = image.url;
+        mediaElement.autoplay = true;
+        mediaElement.muted = true;
+        mediaElement.loop = true;
+        mediaElement.playsInline = true; // helps on mobile
+        mediaElement.classList.add('item');
+    } else {
+        // Default to an image element
+        mediaElement = document.createElement('img');
+        mediaElement.src = image.url;
+        mediaElement.alt = image.title || ''; 
+        mediaElement.loading = 'lazy'; 
+        mediaElement.classList.add('item');
+    }
+
+    const containerDiv = document.createElement('div');
+    containerDiv.classList.add('item-container');
+
+    const overlayDiv = document.createElement('div');
+    overlayDiv.classList.add('overlay');
+
+    const titleElement = document.createElement('div');
+    titleElement.classList.add('overlay-title');
+    titleElement.textContent = image.title;
+
+    if (image.title.length > 20) {
+    titleElement.classList.add('long');
+}
 
 
-        const containerDiv = document.createElement('div');
-        containerDiv.classList.add('item-container');
+    const tipoElement = document.createElement('div');
+    tipoElement.classList.add('overlay-tipo');
+    tipoElement.textContent = image.tipo; 
 
-  
-        const overlayDiv = document.createElement('div');
-        overlayDiv.classList.add('overlay');
+    overlayDiv.appendChild(titleElement);
+    overlayDiv.appendChild(tipoElement);
 
+    containerDiv.appendChild(mediaElement);
+    containerDiv.appendChild(overlayDiv);
 
-        const titleElement = document.createElement('div');
-        titleElement.classList.add('overlay-title');
-        titleElement.textContent = image.title;
+    container.appendChild(containerDiv);
 
-
-        const tipoElement = document.createElement('div');
-        tipoElement.classList.add('overlay-tipo');
-        tipoElement.textContent = image.tipo; 
-
-
-        overlayDiv.appendChild(titleElement);
-        overlayDiv.appendChild(tipoElement);
-
-
-        containerDiv.appendChild(img);
-        containerDiv.appendChild(overlayDiv);
-
-
-        container.appendChild(containerDiv);
-
-        containerDiv.addEventListener('click', function() {
-            const pageName = image.title.toLowerCase().replace(/\s+/g, '-') + '.html'; 
-            window.location.href = pageName; 
-        });
+    containerDiv.addEventListener('click', function() {
+        const pageName = image.title.toLowerCase().replace(/\s+/g, '-') + '.html'; 
+        window.location.href = pageName; 
     });
+});
+
 });

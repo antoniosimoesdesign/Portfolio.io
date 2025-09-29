@@ -85,14 +85,15 @@
 .menu-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; 
+    gap: 93px; 
     margin-left: 0.4em;
 }
 
 .menu-column {
     display: flex;
     flex-direction: column;
-    min-width: 200px; 
+   /* min-width: 200px; */
+    
 }
 
 .placeholder-text-title {
