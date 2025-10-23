@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
-    background-color: #000000;
+    padding: 12px 0px;
+    background-color: #000;
     color: #FFFFF0;
     position: fixed; 
     top: 0;
@@ -18,7 +18,7 @@
     font-size: 30px;
     font-weight: 900;
     cursor: pointer; 
-    margin-left: 5px; 
+    margin-left: 10px; 
 }
 
 .title:hover {
@@ -30,7 +30,7 @@
     gap: 40px;
     font-size: 30px;
     font-weight: 900;
-    margin-right: 46px; 
+    margin-right: 27px; 
 }
 
 .nav-items span {
@@ -44,12 +44,12 @@
 .top-bar::after {
     content: "";
     display: block;
-    width: calc(100% - 90px); 
+    width: calc(100% - 36.5px); 
     height: 1px;
     background-color: #FFFFF0;
     position: absolute;
     bottom: 0;
-    left: 25px; 
+    left: 10px; 
 
 }
 
@@ -118,17 +118,18 @@
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 
     .top-bar::after {
         display: none;
     }
 
+
     .title {
         font-size:24px;
         font-weight: 900;
         cursor: pointer; 
-        margin-left: -5px; 
+        margin-left: 10px; 
         -webkit-tap-highlight-color: transparent;
     }
 
@@ -140,7 +141,7 @@
         text-align: right;
         outline: none;
         -webkit-tap-highlight-color: transparent;
-      
+        margin-right: -0.4em;
     }
 
     #menu-button-minus {
@@ -150,6 +151,7 @@
         cursor: default;
         outline: none;
         -webkit-tap-highlight-color: transparent;
+        margin-right: -0.4em;
     }
 
     #menu-button-plus:focus,
@@ -184,7 +186,7 @@
         position: fixed;
         top: 47px;
         width: calc(100% - 40px);
-        left: 1px;
+        left: 0.5em;
         transition: opacity 0.5s ease, visibility 0.5s ease;
         height: 100vh !important;
         z-index: 1000;
