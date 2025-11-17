@@ -1,0 +1,164 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+body {
+    background-color: #000000;
+    font-family: 'Satoshi', sans-serif;
+    color: #FFFFF0;
+}
+
+button, input, select, textarea, a, img {
+    outline: none;
+}
+
+#menu-button-plus:focus,
+#menu-button-minus:focus {
+    outline: none;
+}
+
+.work-info {
+    position: fixed;
+    top: 90px;
+    left: 26px;
+    max-width: calc(100% - 75%); 
+    color: #FFFFF0;
+}
+
+.work-text {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.work-description {
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.work-description a{
+    color: #FFFFEA; 
+    text-decoration: underline; 
+    margin-left: 0em;
+}
+
+
+
+.container-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: calc(100% - 94%); 
+    margin-top: 8.5em; 
+    gap: 1em;
+   
+}
+
+.work-images {
+    max-width: 50%;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 0.5em;
+}
+
+.seta-icon {
+    display: none;
+}
+
+.footer {
+    height: 50px; /* Adjust the height as needed */
+    background-color: black;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    text-align: center;
+    padding-top: 2em;
+    margin-left: 1.7em;
+    color: #BEBEAF;;
+    font-size: 15px;
+}
+
+#work-image-1{
+ max-height: 85vh;
+  margin-top: 1em;
+}
+
+
+@media only screen and (max-width: 900px) {
+    body {
+        height:fit-content;
+        overflow-x: hidden;
+    }
+
+    .work-info {
+        position: relative;
+        margin: 20px;
+        top: 8px;
+        left: -4.8px;
+        max-width: 90%;
+        color: #FFFFF0;
+        margin-top: 5em;
+
+    }
+
+    .work-text {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 1px;
+      
+    }
+    
+    .work-description {
+        font-size: 15px;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
+    .container-images {
+        margin-left: 0; 
+        margin-top: 30px;
+    }
+
+    .work-images {
+        max-width: 90%; 
+        height: auto; 
+        max-height:56vh; 
+        margin-top: 0.5em;
+}
+
+.seta-icon {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 20px auto;
+    cursor: default;
+}
+
+.footer {
+    height: 50px; 
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    padding-top: 4em;
+    margin-left: 0em;
+    color: #BEBEAF;;
+    font-size: 14px;
+}
+
+#work-image-1{
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  #work-image-2{
+    margin-top: 3em;
+    width: 80%;
+  }
+
+  #work-image-3{
+    width: 85%;
+    margin-top: 3em;
+  }
+
+}

@@ -65,7 +65,7 @@ button, input, select, textarea, a, img {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     body {
         height: 100%;
         overflow-x: hidden;
