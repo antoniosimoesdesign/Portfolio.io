@@ -95,8 +95,6 @@ button, input, select, textarea, a, img {
   justify-content:center;
   align-items:center;
   z-index:1000;
- overflow-y: auto;
- scroll-snap-align: start none;
 }
 
 #lightbox-image{
