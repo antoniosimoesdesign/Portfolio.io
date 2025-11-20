@@ -69,11 +69,17 @@
     </div>
   
     <div class="container-images">
-        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/88f70760-c533-11f0-a260-ff1470f1168f-arraial4.png">
-        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/8d7def10-c533-11f0-a260-ff1470f1168f-verificando.png">
-        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/8c1c8a50-c533-11f0-a260-ff1470f1168f-Stand-Up--Chill-poster-v3.png">
+        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/88f70760-c533-11f0-a260-ff1470f1168f-arraial4.png" onclick="openModal();currentSlide(1)">
+        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/8d7def10-c533-11f0-a260-ff1470f1168f-verificando.png" onclick="openModal();currentSlide(2)">
+        <img id="work-image-1" class="work-images" src="https://cdn.cosmicjs.com/8c1c8a50-c533-11f0-a260-ff1470f1168f-Stand-Up--Chill-poster-v3.png" onclick="openModal();currentSlide(3)">
 
     </div>
+
+      <div id="lightbox"  class="lightbox">
+        <button id="close-btn">&times;</button>
+        <img id="lightbox-image" src="">
+      </div>
+
 
 
 
@@ -83,6 +89,36 @@
 
     <script src="./js/topbar.js"></script>
     <script src="./js/seta-icon.js"></script> 
+    <script>
+const galleryItems = document.querySelectorAll('.work-images');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const closeBtn = document.getElementById('close-btn');
+
+//Open Lightbox
+galleryItems.forEach(item =>{
+  item.addEventListener("click", ()=>{
+    const fullSrc = item.src.replace('-thumbnail', '');
+    lightboxImage.src = fullSrc;
+    lightbox.style.display = 'flex';
+  })
+
+  
+})
+
+//Closebtn
+closeBtn.addEventListener("click", ()=>{
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener("click",(event)=>{
+  if(event.target === lightbox){
+   lightbox.style.display = "none"
+  }
+});
+
+
+</script>
  
 </body>
 </html>

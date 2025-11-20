@@ -80,10 +80,56 @@ button, input, select, textarea, a, img {
 #work-image-1{
  max-height: 120vh;
   margin-top: 1em;
+  cursor:pointer;
+  transition: transform 0.3s;
+}
+
+.lightbox{
+  position:fixed;
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  display:none;
+  background-color:rgba(0,0,0,1);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+ overflow-y: auto;
+ scroll-snap-align: start none;
+}
+
+#lightbox-image{
+  max-width:100%;
+  max-height:95%;
+}
+
+#close-btn{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  background:none;
+  color:#FFFFF0;
+  border:none;
+  cursor:pointer;
 }
 
 
 @media only screen and (max-width: 900px) {
+
+
+#lightbox-image{
+  max-width:100%;
+  max-height:83%;
+}
+
+#close-btn{
+  top:8px;
+  right:10px;
+  font-size:40px;
+}
+
     body {
         height:fit-content;
         overflow-x: hidden;
@@ -149,16 +195,6 @@ button, input, select, textarea, a, img {
 #work-image-1{
     width: 100%;
     margin-top: 1em;
-  }
-
-  #work-image-2{
-    margin-top: 3em;
-    width: 80%;
-  }
-
-  #work-image-3{
-    width: 85%;
-    margin-top: 3em;
   }
 
 }
