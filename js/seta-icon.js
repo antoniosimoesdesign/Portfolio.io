@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const setaIconUrl = 'https://cdn.cosmicjs.com/7c2f6ff0-4518-11ef-bfb7-a598d323cbfc-mockp-fixe-seta.png';
+    const setaIconUrl = './img/About/seta.png';
 
 
     const setaIcon = document.getElementById('seta-icon');

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('menu');
 
 
-    const plusImageUrl = 'https://cdn.cosmicjs.com/f4eb09e0-42b6-11ef-bfb7-a598d323cbfc-.png'; 
-    const minusImageUrl = 'https://cdn.cosmicjs.com/09f7ae10-42b7-11ef-bfb7-a598d323cbfc--.png'; 
+    const plusImageUrl = './img/About/mais.png'; 
+    const minusImageUrl = './img/About/menos.png'; 
 
 
     menuButtonPlus.src = plusImageUrl;
