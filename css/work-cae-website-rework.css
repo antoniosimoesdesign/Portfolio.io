@@ -192,6 +192,12 @@ transition: transform 1s;
     margin-top: 1em;
   }
 
+  #work-image-2{
+    width: 100%;
+    margin-top: .75em;
+  }
+
+
   #lightbox-image{
   max-width:95%;
   max-height:100%
