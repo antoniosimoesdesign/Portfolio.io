@@ -57,7 +57,6 @@ button, input, select, textarea, a, img {
     max-width: 50%;
     height: auto;
     max-height: 70vh;
-    margin-top: 0.5em;
 }
 
 .seta-icon {
@@ -79,7 +78,7 @@ button, input, select, textarea, a, img {
 
 #work-image-1{
 max-height: 85vh;
-margin-top: 1em;
+margin-top: 0em;
 cursor: zoom-in;
 transition: transform 1s;
 }
@@ -90,6 +89,21 @@ margin-top: 2em;
 cursor: zoom-in;
 transition: transform 1s;
 }
+
+#work-image-6{
+max-height: 85vh;
+margin-top: 4em;
+cursor: zoom-in;
+transition: transform 1s;
+}
+
+#lightbox-image{
+  max-width:80%;
+  max-height:100%;
+}
+
+
+
 
 @media only screen and (max-width: 900px) {
     body {
