@@ -8,7 +8,7 @@ const lightboxVideo = document.getElementById('lightbox-video');
 //Open Lightbox
 galleryItems.forEach(item =>{
   item.addEventListener("click", ()=>{
-    const fullSrc = item.src.replace('', '');
+    const fullSrc = item.src;
     lightboxImage.src = fullSrc;
     lightbox.style.display = 'flex';
    
