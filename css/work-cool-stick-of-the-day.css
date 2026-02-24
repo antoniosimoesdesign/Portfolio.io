@@ -58,7 +58,6 @@ button, input, select, textarea, a, img {
     height: auto;
     max-height: 70vh;
     margin-top: 0.5em;
-    
 }
 
 .seta-icon {
@@ -79,19 +78,20 @@ button, input, select, textarea, a, img {
 }
 
 #work-image-1{
- max-height: 120vh;
-  margin-top: 1em;
-  cursor: zoom-in;
-  transition: transform 1s;
+max-height: 85vh;
+margin-top: 1em;
+cursor: zoom-in;
+transition: transform 1s;
 }
 
-#lightbox-image{
-  max-height:100%;
+#work-image-2{
+max-height: 85vh;
+margin-top: 2em;
+cursor: zoom-in;
+transition: transform 1s;
 }
 
 @media only screen and (max-width: 900px) {
-
-
     body {
         height:fit-content;
         overflow-x: hidden;
@@ -159,9 +159,9 @@ button, input, select, textarea, a, img {
     margin-top: 1em;
   }
 
-    #lightbox-image{
-  max-width:95%;
-  max-height:100%
-}
+  #work-image-2{
+    width: 100%;
+    margin-top: .75em;
+  }
 
 }
