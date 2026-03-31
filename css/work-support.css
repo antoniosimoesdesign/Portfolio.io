@@ -1,9 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 
 body {
-    background-color: #000000;
+    background-color: black;
     font-family: 'Satoshi', sans-serif;
-    color: #FFFFF0;
+    color: #FCFBE6;
 }
 
 button, input, select, textarea, a, img {
@@ -16,46 +16,57 @@ button, input, select, textarea, a, img {
 }
 
 .work-info {
-    position: fixed;
-    top: 90px; 
-    left: 26px;
-    max-width: calc(100% - 75%); 
-    color: #FFFFF0;
+    margin-top: 7.5em;
+    margin-left: 1.2em;
+    max-width: 50%; 
+    color: #FCFBE6;
 }
 
 .work-text {
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 .work-description {
     font-size: 17px;
-    font-weight: 300;
-    margin-top: 20px;
+    font-weight: 400;
+    margin-top: 30px;
 }
 
 .work-description a{
-    color: #FFFFEA; 
+    color: #FCFBE6; 
     text-decoration: underline; 
     margin-left: 0em;
 }
 
+
+
 .container-images {
+    
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: calc(100% - 98%); 
-    margin-top: 8.5em; 
+    margin-left:0; 
+    margin-top: 3em; 
     gap: 1em;
-   
 }
 
 .work-images {
-    max-width: 50%;
+    max-width: 97.7%;
     height: auto;
-    max-height: 70vh;
-    margin-top: 0.5em;
+    max-height: 100%;
+}
+
+
+
+#work-image-2{
+max-height:100%;
+margin-top: 1.5em;
+
+
+transition: transform 1s;
 }
 
 .seta-icon {
@@ -63,30 +74,27 @@ button, input, select, textarea, a, img {
 }
 
 .footer {
-    height: 50px; 
+    height: 50px;
     background-color: black;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: baseline;
     text-align: center;
     padding-top: 2em;
     margin-left: 1.7em;
-    color: #BEBEAF;;
+    color: #FCFBE6;
     font-size: 15px;
 }
 
-#work-image-1{
-    width: 45%;
-  }
 
-  #work-image-2{
-max-height: 77vh;
-  }
 
-  #work-image-3{
-max-height: 200vh;
-  }
-  
+
+#lightbox-image{
+  max-width:80%;
+  max-height:100%;
+}
+
+
 
 
 @media only screen and (max-width: 900px) {
@@ -95,15 +103,15 @@ max-height: 200vh;
         overflow-x: hidden;
     }
 
-
     .work-info {
-        position: relative; 
-        margin: 20px;
-        top: 8px; 
-        left: -4.8px;
-        max-width: 90%;
-        color: #FFFFF0;
+        position: relative;
+        margin: 10px;
+        top: 8px;
+        left: 0px;
+        max-width: 100%;
+        color: #FCFBE6;
         margin-top: 5em;
+     
 
     }
 
@@ -126,10 +134,10 @@ max-height: 200vh;
     }
 
     .work-images {
-        max-width: 90%; 
-        height: auto;
-        max-height:56vh;
-        margin-top: 0.5em; 
+        max-width: 96%;
+        height: auto; 
+        max-height:56vh; 
+        margin-top: 0.5em;
 }
 
 .seta-icon {
@@ -137,28 +145,28 @@ max-height: 200vh;
     width: 50px;
     height: auto;
     margin: 20px auto;
-    cursor: default;
+    
 }
 
 .footer {
     height: 50px; 
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: baseline;
     text-align: center;
-    padding-top: 1em;
+    padding-top: 4em;
     margin-left: 0em;
-    color: #BEBEAF;;
     font-size: 14px;
 }
 
 #work-image-1{
-    width: 80%;
+    width: 100%;
+    margin-top: 1em;
   }
 
-#work-image-4{
-    width: 70%;
+  #work-image-2{
+    width: 100%;
+    margin-top: .75em;
   }
 
 }

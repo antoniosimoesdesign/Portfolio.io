@@ -1,29 +1,14 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 
 body {
-    background-color: #000000;
+    background-color: black;
     font-family: 'Satoshi', sans-serif;
-    color: #FFFFF0;
-}
-
-.overlay-title {
-    font-weight: 700; 
-    margin-bottom: 10px; 
-    text-align: center;
-    white-space: normal;  /* allow wrapping */
-    word-break: break-word;
-    max-width: 90%;
-}
-
-.overlay-title.long {
-    font-size: 20px;
-    line-height: 1.2;
+    color: #FCFBE6;
 }
 
 
 .container{
-    /* background-color:pink; */
-    width: 100%;
+    width: 99%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -31,21 +16,17 @@ body {
 }
 
 #container-1{
-
     width: calc(100% / 3);
     display: block;
-    
 }
 
 #container-2{
-
     width: calc(100% / 3);
     display: block;
 }
 
 
 #container-3{
-  
     width: calc(100% / 3);
     display: block;
 }
@@ -70,6 +51,7 @@ h2{
     text-align: left;
     width: 75%;
     font-size: 1em;
+   
 
 }
 
@@ -81,7 +63,7 @@ h2{
 h3{
     margin-top: -10px;
     font-size: 0.8em;
-    color: #fffff0;
+    color: #FCFBE6;
     font-weight: 100;
     /* text-transform: uppercase; */
 }
@@ -118,13 +100,13 @@ video:hover  {
 
 a{
     text-decoration: none;
-    color: #FFFFF0;
+    color: #FCFBE6;
 }
 
 .footer {
     width: 100%;
     height: 50px; 
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
     display: inline-block !important;
     align-items: center;
     text-align: center;
@@ -147,18 +129,17 @@ a{
 
     .container{
     display: none;
+
   }
 
 
   .mobile-container{
-    
-    /* background-color:pink;  */
     width: 100%;
     height: 100vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: -1em;
+    margin-top: 7em;
 }
 
 .mobile-container-container{
@@ -182,7 +163,7 @@ img{
 
     .footer {
         height: 50px;
-        background-color: black;
+        background-color: #000;
         justify-content: center;
         padding-top: 1em;
         color: #BEBEAF;

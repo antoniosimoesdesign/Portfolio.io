@@ -5,20 +5,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 0px;
-    background-color: #000;
-    color: #FFFFF0;
+    color: #FCFBE6;
     position: fixed; 
     top: 0;
     width: 100%; 
     z-index: 1000; 
     padding-bottom: 5px; 
+    mix-blend-mode: difference;
+    
 }
 
 .title {
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 500;
     cursor: pointer; 
-    margin-left: 10px; 
+    margin-left: 20px; 
+       
 }
 
 .title:hover {
@@ -29,8 +31,8 @@
     display: flex;
     gap: 40px;
     font-size: 30px;
-    font-weight: 900;
-    margin-right: 27px; 
+    font-weight: 500;
+    margin-right: 35px; 
 }
 
 .nav-items span {
@@ -46,10 +48,11 @@
     display: block;
     width: calc(100% - 36.5px); 
     height: 1px;
-    background-color: #FFFFF0;
+    
     position: absolute;
     bottom: 0;
     left: 10px; 
+    
 
 }
 
@@ -57,7 +60,7 @@
     opacity: 0; 
     visibility: hidden; 
     background-color: rgba(0, 0, 0, 0.91); 
-    color: #FFFFF0;
+    color: #FCFBE6;
     padding: 20px;
     position: fixed;
     top: 57.5px; 
@@ -71,10 +74,12 @@
 
 #menu-button-plus{
     display: none;
+
 }
 
 #menu-button-minus {
     display: none;
+
 }
 
 .menu.show {
@@ -98,7 +103,7 @@
 
 .placeholder-text-title {
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 20px;
 }
 
@@ -127,10 +132,10 @@
 
     .title {
         font-size:24px;
-        font-weight: 900;
+        font-weight: 500;
         cursor: pointer; 
         margin-left: 10px; 
-        -webkit-tap-highlight-color: transparent;
+        
     }
 
     #menu-button-plus {
@@ -140,8 +145,8 @@
         display: inline-block;
         text-align: right;
         outline: none;
-        -webkit-tap-highlight-color: transparent;
-        margin-right: -0.4em;
+        margin-right: -0.37em;
+        font-weight: 100;
     }
 
     #menu-button-minus {
@@ -150,8 +155,8 @@
         height: auto;
         cursor: default;
         outline: none;
-        -webkit-tap-highlight-color: transparent;
-        margin-right: -0.4em;
+        
+        margin-right: -0.37em;
     }
 
     #menu-button-plus:focus,
@@ -179,7 +184,7 @@
         opacity: 0; 
         visibility: hidden;
         background-color: rgba(0, 0, 0, 1); 
-        color: #FFFFF0;
+        color: #FCFBE6;
         padding: 0px;
         padding-left: 14px;
         padding-right: 14px;
@@ -211,7 +216,7 @@
         font-size: 18px;
         margin: 0;
         margin-top: 30px; 
-        font-weight: 700;
+        font-weight: 500;
     }
     
     .placeholder-text-title:first-of-type {
@@ -236,7 +241,7 @@
         font-size: 30px;
         margin: 0;
         margin-top: 15px;
-        font-weight: 900;
+        font-weight: 500;
         position: relative;
         padding-bottom: 5px; 
     }
@@ -260,7 +265,7 @@
         display: flex;
         gap: 40px;
         font-size: 30px;
-        font-weight: 900;
+        font-weight: 500;
         margin-right: 28px; 
     }
  

@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButtonPlus = document.getElementById('menu-button-plus');
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
+    const topbar = document.getElementById('top-bar');
 
 
-    const plusImageUrl = './img/About/mais.png'; 
-    const minusImageUrl = './img/About/menos.png'; 
+    const plusImageUrl = './img/About/mais2.png'; 
+    const minusImageUrl = './img/About/menos2.png'; 
 
 
     menuButtonPlus.src = plusImageUrl;
@@ -17,13 +18,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (menu.classList.contains('show')) {
             menuButtonPlus.src = minusImageUrl;
+                    topbar.style.mixBlendMode = 'normal';
+        topbar.style.backgroundColor = 'black';
         } else {
             menuButtonPlus.src = plusImageUrl;
+                    topbar.style.mixBlendMode = 'difference';
+        topbar.style.backgroundColor = 'transparent';
         }
     });
 
     menuButton.addEventListener('click', function() {
-        menu.classList.toggle('show');
+
+       if (menu.classList.toggle('show')){
+        topbar.style.mixBlendMode = 'normal';
+        topbar.style.backgroundColor = 'black';
+       } else{
+        topbar.style.mixBlendMode = 'difference';
+        topbar.style.backgroundColor = 'transparent';
+       }
+
     });
 
 
