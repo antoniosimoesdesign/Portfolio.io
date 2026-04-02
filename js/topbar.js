@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const topbar = document.getElementById('top-bar');
 
 
-    const plusImageUrl = './img/About/mais2.png'; 
-    const minusImageUrl = './img/About/menos2.png'; 
+    const plusImageUrl = './img/About/mais.png'; 
+    const minusImageUrl = './img/About/menos.png'; 
 
 
     menuButtonPlus.src = plusImageUrl;
