@@ -71,6 +71,11 @@ max-height:100%;
 margin-top: -4.5em;
 }
 
+#work-image-4{
+max-height:100%;
+margin-top: -2.5em;
+}
+
 .seta-icon {
     display: none;
 }
@@ -170,6 +175,11 @@ margin-top: -4.5em;
   #work-image-3{
 max-height:100%;
 margin-top: -1em;
+}
+
+#work-image-4{
+max-height:100%;
+margin-top: 2em;
 }
 
 }
